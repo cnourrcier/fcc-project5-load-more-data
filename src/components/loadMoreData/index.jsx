@@ -17,7 +17,6 @@ export default function LoadMoreData() {
                 throw new Error('Network response was not ok');
             }
             const data = await res.json();
-            console.log(data.products.length);
             if (data?.products?.length) {
                 setProducts(prevData => [...prevData, ...data.products]);
             }
